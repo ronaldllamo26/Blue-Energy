@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Energy Careers - China Truck Spare Parts Expert</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-link">
+                <div class="logo-container">
+                    <div class="logo-placeholder">
+                        <img src="circle logo.png" alt="Blue Energy Logo" class="logo-img"> 
+                    </div>
+                    <div class="logo-text">BLUE ENERGY<br><span>CAREERS</span></div>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#parts">Parts Catalog</a></li>
+                <li><a href="#why-us">Why Choose Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero" id="home">
+        <video autoplay muted loop playsinline preload="auto" class="hero-video" poster="images/hero-poster.jpg" controlsList="nodownload nofullscreen noremoteplayback" disablePictureInPicture>
+            <source src="Video tr (1).mp4" type="video/mp4">
+            Your browser does not support video backgrounds.
+        </video>
+        
+        <button class="video-control" id="videoControl" title="Pause/Play video">
+            <span id="videoIcon">⏸</span>
+        </button>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Your Trusted Source for China Truck Spare Parts</h1>
+            <p class="hero-subtitle">Genuine engine parts for all major Chinese truck brands</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get a Quote</a>
+                <a href="#parts" class="btn btn-secondary">Browse Engine Models</a>
+            </div>
+            <div class="hero-badge">
+             Serving the Entire Philippines Nationwide
+            </div>
+        </div>
+    </section>
+
+    <!-- Engine Models Section -->
+    <section class="engine-models" id="parts">
+        <div class="container">
+            <h2 class="section-title">We Service These Engine Models</h2>
+            <p class="section-subtitle">Browse our extensive catalog of Chinese truck engines</p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search engine model (e.g., WD615, ISM11, YC6MK)...">
+            </div>
+
+            <div class="models-grid" id="modelsGrid"></div>
+
+            <div class="pagination-controls" id="paginationControls">
+                <button class="pagination-btn" id="prevBtn">← Previous</button>
+                <div class="page-info" id="pageInfo">Page 1 of 3</div>
+                <button class="pagination-btn" id="nextBtn">Next →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Blue Energy?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Genuine Parts</h3>
+                    <p>Direct from trusted Chinese manufacturers. No imitations, only authentic spare parts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Expert Support</h3>
+                    <p>Our team knows Chinese truck engines inside out. Get professional advice every time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Fast Response</h3>
+                    <p>Get quotes within hours, not days. We understand downtime costs you money.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Nationwide Delivery</h3>
+                    <p>We ship anywhere in the Philippines via LBC. Fast and reliable delivery to your location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Order Section -->
+    <section class="how-to-order">
+        <div class="container">
+            <h2 class="section-title">How to Order</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Contact Us</h3>
+                    <p>Call or message us with your requirements</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Share Details</h3>
+                    <p>Tell us your engine model & part needed</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Quote</h3>
+                    <p>Receive instant pricing and availability</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Pick Up or LBC Delivery</h3>
+                    <p>Store pickup or nationwide delivery via LBC</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <input type="text" name="from_name" placeholder="Your Name" required>
+                        <input type="email" name="from_email" placeholder="Your Email" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <input type="text" name="engine" placeholder="Engine Model (e.g., WD615)">
+                        <textarea name="message" rows="4" placeholder="What parts do you need?" required></textarea>
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <span id="btnText">Send Inquiry</span>
+                            <span id="btnLoader" style="display:none;">Sending...</span>
+                        </button>
+                        <div id="formStatus" style="margin-top: 1rem; text-align: center; font-weight: 600;"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Call Us</h3>
+                        <p><a href="tel:09171076107">0917 107 6107</a></p>
+                        <p><a href="tel:09171785418">0917 178 5418</a></p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Visit Our Store</h3>
+                        <p>876 A. Bonifacio, Balintawak, Quezon City</p>
+                        <a href="https://waze.com/ul?q=BLUE%20ENERGY%20AND%20TRUCKS%20SOLUTION" target="_blank" class="waze-link">Open in Waze →</a>
+                    </div>
+                    <div class="info-card">
+                        <h3>Business Hours</h3>
+                        <p>Monday - Saturday</p>
+                        <p>8:00 AM - 5:00 PM</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>We're Hiring!</h3>
+                        <p>Looking for skilled professionals in the truck industry.</p>
+                        <a href="https://www.facebook.com/profile.php?id=100091377644182" target="_blank" class="careers-link">View Job Openings →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.4855!2d121.0!3d14.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM5JzAwLjAiTiAxMjHCsDAwJzAwLjAiRQ!5e0!3m2!1sen!2sph!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTS MODAL -->
+    <div class="parts-modal" id="partsModal">
+        <div class="parts-modal-content">
+            <span class="close-modal" id="closePartsModal">&times;</span>
+            <h2 id="modalEngineTitle">Engine Parts</h2>
+            <p class="modal-brand" id="modalEngineBrand"></p>
+            <div class="parts-grid" id="partsGrid"></div>
+            <div class="modal-actions">
+                <a href="#contact" class="btn btn-primary" id="inquiryBtn">Inquire This Engine</a>
+                <a href="https://wa.me/639171076107" target="_blank" class="btn btn-secondary">WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Blue Energy Careers</h4>
+                    <p>Your trusted partner for China truck spare parts. Serving the entire Philippines nationwide via LBC delivery.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#parts">Parts Catalog</a></li>
+                        <li><a href="#why-us">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <a href="https://www.facebook.com/BlueEnergyAndTrucksSolutionOPC" target="_blank" class="social-link">Facebook</a>
+                    <a href="https://wa.me/639171076107" target="_blank" class="social-link whatsapp-link">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Blue Energy Careers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
