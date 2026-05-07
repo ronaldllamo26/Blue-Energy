@@ -38,21 +38,6 @@ blue-energy-ph-landing-page/
 └── README.md           # Project documentation
 ```
 
-## 🚀 Getting Started
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/blue-energy-ph.git
-```
-
-2. Navigate to the project folder:
-
-```bash
-cd blue-energy-ph-landing-page
-```
-
-3. Open `index.html` in your browser.
 
 ## 💡 Contributing
 
