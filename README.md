@@ -26,7 +26,6 @@ The landing page is designed to showcase Blue Energy PH's products, services, an
 
 ## 📁 Folder Structure
 
-```
 blue-energy-ph-landing-page/
 │
 ├── index.html          # Main landing page
@@ -36,7 +35,7 @@ blue-energy-ph-landing-page/
 │   └── script.js       # Main JS file
 ├── assets/             # Images, icons, and other assets
 └── README.md           # Project documentation
-```
+
 
 
 ## 💡 Contributing
